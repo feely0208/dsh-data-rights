@@ -1,0 +1,65 @@
+{
+  "name": "@deepwhale-cn/dsh-data-rights",
+  "version": "0.1.0",
+  "description": "查查阅/复制/删除权有没有真的实现 —— 个保法第 45/47 条是明文要求",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "plugin",
+    "skill",
+    "security",
+    "guard",
+    "data-rights",
+    "data-rights",
+    "right-to-delete",
+    "right-to-access",
+    "个人信息权利",
+    "删除权",
+    "查阅权",
+    "账号注销",
+    "pipl"
+  ],
+  "files": [
+    "lib",
+    "skill",
+    "bin",
+    "rules",
+    "docs",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "dsh-data-rights": "./bin/cli.mjs"
+  },
+  "engines": {
+    "dsh": ">=0.1.0-rc.6",
+    "node": ">=18"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "dependencies": {
+    "@deepwhale-cn/dsh-guard-core": "^0.8.1"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-skill": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feely0208/dsh-data-rights.git"
+  },
+  "homepage": "https://www.deepwhale.org.cn/skills.html",
+  "bugs": {
+    "url": "https://github.com/feely0208/dsh-data-rights/issues"
+  }
+}

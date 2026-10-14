@@ -1,0 +1,14 @@
+{
+  "id": "RIGHTS-NO-REQUEST-CHANNEL",
+  "title": "文档里找不到个人信息权利请求的受理渠道",
+  "severity": "low",
+  "source": "《个人信息保护法》第五十条 —— 个人信息处理者应当建立便捷的个人行使权利的申请受理和处理机制，拒绝的应说明理由",
+  "advice": "文档里没有告诉用户「怎么找你行使查阅/删除/更正权」。个保法第 50 条要求建立受理机制并公示。最低限度：在隐私政策或 README 里写明一个联系邮箱和响应时限。",
+  "check": {
+    "type": "files-lack",
+    "pattern": "删除个人信息|查阅.*个人信息|行使.*权利|权利请求|数据主体|注销账号|联系我们.*隐私|privacy@|dpo@",
+    "flags": "i",
+    "paths": ["README.md", "PRIVACY.md", "SECURITY.md", "docs/*.md", "docs/**/*.md", "*.md"],
+    "evidence": "文档里没有说明如何行使个人信息查阅/删除权"
+  }
+}

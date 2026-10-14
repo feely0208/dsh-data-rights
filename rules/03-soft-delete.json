@@ -1,0 +1,29 @@
+{
+  "id": "RIGHTS-SOFT-DELETE",
+  "title": "「删除」只是打了标记，数据还在库里",
+  "severity": "high",
+  "source": "《个人信息保护法》第四十七条 —— 应当主动删除个人信息；仅为「标记删除」而未实际删除或匿名化，不构成删除",
+  "advice": "这个删除操作只是把 `deleted` / `is_deleted` / `status` 置位，**数据行还在**。个保法第 47 条的「删除」包括删除和匿名化两种 —— 只打标记意味着数据仍可被读取、导出、泄露，监管检查时这会被认定为未删除。做法：真删；或立即对该行做不可逆匿名化（保留统计价值但无法还原到个人）。",
+  "check": {
+    "type": "file-pattern",
+    "pattern": "(delete|destroy|remove|erase)[\\w.]*\\s*\\([^;]{0,140}?(update|set)[^;]{0,100}?(deletedAt|deleted_at|is_deleted|isDeleted|deleted\\s*[:=]\\s*true|status\\s*[:=]\\s*[\"']?(deleted|inactive|archived))",
+    "flags": "gi",
+    "exts": [
+      ".js",
+      ".mjs",
+      ".cjs",
+      ".ts",
+      ".tsx",
+      ".jsx",
+      ".py",
+      ".go",
+      ".java",
+      ".kt",
+      ".rb",
+      ".php",
+      ".sql"
+    ],
+    "max": 20,
+    "wholeFile": true
+  }
+}
