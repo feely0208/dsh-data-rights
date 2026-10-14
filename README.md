@@ -48,7 +48,11 @@ dsh plugin --profile web add @deepwhale-cn/dsh-data-rights
 npx @deepwhale-cn/dsh-data-rights
 ```
 
-![dsh-data-rights 的检查报告示例](https://www.deepwhale.org.cn/plugin-assets/dsh-data-rights/report.png)
+![dsh-data-rights 检查报告示例](https://www.deepwhale.org.cn/plugin-assets/dsh-data-rights/report.png)
+
+![dsh-data-rights 演示模式输出](https://www.deepwhale.org.cn/plugin-assets/dsh-data-rights/demo.png)
+
+![dsh-data-rights 规则与依据](https://www.deepwhale.org.cn/plugin-assets/dsh-data-rights/rules.png)
 
 ## 用法
 
