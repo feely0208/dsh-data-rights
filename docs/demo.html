@@ -1,0 +1,62 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<style>
+  * { box-sizing: border-box; }
+  body { margin:0; background:#0d0f13; display:flex; justify-content:center;
+         align-items:flex-start; padding:22px; font-family:-apple-system,"PingFang SC",
+         "Helvetica Neue",sans-serif; }
+  .win { width:1180px; border-radius:11px; overflow:hidden;
+          box-shadow:0 14px 44px rgba(0,0,0,.55); }
+  .bar { background:#2a2d34; padding:11px 15px; display:flex; align-items:center; gap:9px; }
+  .dot { width:12px; height:12px; border-radius:50%; }
+  .t { margin-left:11px; color:#7a8290; font-size:13px; letter-spacing:.02em; }
+  .term { background:#1b1d22; padding:20px 22px 24px; font-family:"SF Mono",Menlo,Consolas,
+           "PingFang SC",monospace; font-size:13.5px; line-height:1.72; }
+  .cmd { color:#5ee08a; margin-bottom:13px; font-size:13.5px; }
+  .cmd b { color:#fff; font-weight:600; }
+  .l { white-space:pre-wrap; word-break:break-word; }
+</style></head><body>
+  <div class="win">
+    <div class="bar">
+      <span class="dot" style="background:#ff5f57"></span>
+      <span class="dot" style="background:#febc2e"></span>
+      <span class="dot" style="background:#28c840"></span>
+      <span class="t">dsh-data-rights · demo</span>
+    </div>
+    <div class="term">
+      <div class="cmd">$ <b>dsh-data-rights --demo</b></div>
+      <div class="l"><span style="color:#7a8290">&nbsp;</span></div>
+<div class="l"><span style="color:#d8dee9">  【演示模式】使用内置样本，不是你的真实项目。</span></div>
+<div class="l"><span style="color:#7a8290">&nbsp;</span></div>
+<div class="l"><span style="color:#7a8290">&nbsp;</span></div>
+<div class="l"><span style="color:#d8dee9">  深鲸守护 · 个人信息权利 v0.1.0</span></div>
+<div class="l"><span style="color:#d8dee9">  ──────────────────────────────────────────────────────────────────</span></div>
+<div class="l"><span style="color:#d8dee9">  扫描范围   内置演示样本 · 故意有问题的项目</span></div>
+<div class="l"><span style="color:#d8dee9">             3 个文件 · 0 个目录已跳过</span></div>
+<div class="l"><span style="color:#d8dee9">  检查规则   4/4 条</span></div>
+<div class="l"><span style="color:#ffd166">  命中       3 条</span></div>
+<div class="l"><span style="color:#7a8290">&nbsp;</span></div>
+<div class="l"><span style="color:#ff6b6b">  【高】1 条</span></div>
+<div class="l"><span style="color:#7a8290">    · 「删除」只是打了标记，数据还在库里</span></div>
+<div class="l"><span style="color:#d8dee9">      位置  users.js:2</span></div>
+<div class="l"><span style="color:#7a8290">      证据  deleteUser(id) { await db.update(&#x27;users&#x27;).set({ is_deleted</span></div>
+<div class="l"><span style="color:#7a8290">      依据  《个人信息保护法》第四十七条 —— 应当主动删除个人信息；仅为「标记删除」而未实际删除或匿名化，不构成删除</span></div>
+<div class="l"><span style="color:#d8dee9">      建议  这个删除操作只是把 `deleted` / `is_deleted` / `status` 置位，**数据行还在**。个保法第 47 条的「删除」包括删除和匿名化两种 —— 只打标记意味着数据仍可被读取、导出、泄露，监管检查时这会被认定为未删除。做法：真删；或立即对该行做不可逆匿名化（保留统计价值但无法还原到个人）。</span></div>
+<div class="l"><span style="color:#7a8290">&nbsp;</span></div>
+<div class="l"><span style="color:#ffd166">  【中】1 条</span></div>
+<div class="l"><span style="color:#7a8290">    · 找不到查阅 / 复制个人信息的实现</span></div>
+<div class="l"><span style="color:#d8dee9">      位置  **/*.js</span></div>
+<div class="l"><span style="color:#7a8290">      证据  已检查 2 个文件，均未提到</span></div>
+<div class="l"><span style="color:#7a8290">      依据  《个人信息保护法》第四十五条 —— 个人有权向个人信息处理者查阅、复制其个人信息；符合条件的，个人信息处理者应当提供转移的途径</span></div>
+<div class="l"><span style="color:#d8dee9">      建议  代码里找不到「查阅个人信息」或「导出个人信息」的实现。个保法第 45 条要求：用户有权查阅、复制自己的个人信息，符合条件时还要支持**转移**（可携带权）。实践中通常是一个「导出我的数据」功能或一个数据主体请求（DSR）接口。</span></div>
+<div class="l"><span style="color:#7a8290">&nbsp;</span></div>
+<div class="l"><span style="color:#5ee08a">  【低】1 条</span></div>
+<div class="l"><span style="color:#7a8290">    · 文档里找不到个人信息权利请求的受理渠道</span></div>
+<div class="l"><span style="color:#d8dee9">      位置  README.md</span></div>
+<div class="l"><span style="color:#7a8290">      证据  以下文件都不存在：README.md / PRIVACY.md / SECURITY.md …</span></div>
+<div class="l"><span style="color:#7a8290">      依据  《个人信息保护法》第五十条 —— 个人信息处理者应当建立便捷的个人行使权利的申请受理和处理机制，拒绝的应说明理由</span></div>
+<div class="l"><span style="color:#d8dee9">      建议  文档里没有告诉用户「怎么找你行使查阅/删除/更正权」。个保法第 50 条要求建立受理机制并公示。最低限度：在隐私政策或 README 里写明一个联系邮箱和响应时限。</span></div>
+<div class="l"><span style="color:#7a8290">&nbsp;</span></div>
+<div class="l"><span style="color:#d8dee9">  ──────────────────────────────────────────────────────────────────</span></div>
+    </div>
+  </div>
+</body></html>

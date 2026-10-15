@@ -1,0 +1,47 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<style>
+  * { box-sizing: border-box; }
+  body { margin:0; background:#0d0f13; display:flex; justify-content:center;
+         align-items:flex-start; padding:22px; font-family:-apple-system,"PingFang SC",
+         "Helvetica Neue",sans-serif; }
+  .win { width:1180px; border-radius:11px; overflow:hidden;
+          box-shadow:0 14px 44px rgba(0,0,0,.55); }
+  .bar { background:#2a2d34; padding:11px 15px; display:flex; align-items:center; gap:9px; }
+  .dot { width:12px; height:12px; border-radius:50%; }
+  .t { margin-left:11px; color:#7a8290; font-size:13px; letter-spacing:.02em; }
+  .term { background:#1b1d22; padding:20px 22px 24px; font-family:"SF Mono",Menlo,Consolas,
+           "PingFang SC",monospace; font-size:13.5px; line-height:1.72; }
+  .cmd { color:#5ee08a; margin-bottom:13px; font-size:13.5px; }
+  .cmd b { color:#fff; font-weight:600; }
+  .l { white-space:pre-wrap; word-break:break-word; }
+</style></head><body>
+  <div class="win">
+    <div class="bar">
+      <span class="dot" style="background:#ff5f57"></span>
+      <span class="dot" style="background:#febc2e"></span>
+      <span class="dot" style="background:#28c840"></span>
+      <span class="t">dsh-data-rights · rules</span>
+    </div>
+    <div class="term">
+      <div class="cmd">$ <b>dsh-data-rights --list-rules</b></div>
+      <div class="l"><span style="color:#7a8290">&nbsp;</span></div>
+<div class="l"><span style="color:#d8dee9">  深鲸守护 · 个人信息权利 —— 4 条规则</span></div>
+<div class="l"><span style="color:#7a8290">&nbsp;</span></div>
+<div class="l"><span style="color:#d8dee9">  [high] RIGHTS-NO-DELETE</span></div>
+<div class="l"><span style="color:#d8dee9">        找不到删除个人信息 / 注销账号的实现</span></div>
+<div class="l"><span style="color:#7a8290">        依据：《个人信息保护法》第四十七条 —— 个人请求删除个人信息的，个人信息处理者应当主动删除；第五十条 —— 应建立便捷的个人行使权利的申请受理和处理机制</span></div>
+<div class="l"><span style="color:#7a8290">&nbsp;</span></div>
+<div class="l"><span style="color:#d8dee9">  [medium] RIGHTS-NO-ACCESS</span></div>
+<div class="l"><span style="color:#d8dee9">        找不到查阅 / 复制个人信息的实现</span></div>
+<div class="l"><span style="color:#7a8290">        依据：《个人信息保护法》第四十五条 —— 个人有权向个人信息处理者查阅、复制其个人信息；符合条件的，个人信息处理者应当提供转移的途径</span></div>
+<div class="l"><span style="color:#7a8290">&nbsp;</span></div>
+<div class="l"><span style="color:#d8dee9">  [high] RIGHTS-SOFT-DELETE</span></div>
+<div class="l"><span style="color:#d8dee9">        「删除」只是打了标记，数据还在库里</span></div>
+<div class="l"><span style="color:#7a8290">        依据：《个人信息保护法》第四十七条 —— 应当主动删除个人信息；仅为「标记删除」而未实际删除或匿名化，不构成删除</span></div>
+<div class="l"><span style="color:#7a8290">&nbsp;</span></div>
+<div class="l"><span style="color:#d8dee9">  [low] RIGHTS-NO-REQUEST-CHANNEL</span></div>
+<div class="l"><span style="color:#d8dee9">        文档里找不到个人信息权利请求的受理渠道</span></div>
+<div class="l"><span style="color:#7a8290">        依据：《个人信息保护法》第五十条 —— 个人信息处理者应当建立便捷的个人行使权利的申请受理和处理机制，拒绝的应说明理由</span></div>
+    </div>
+  </div>
+</body></html>
