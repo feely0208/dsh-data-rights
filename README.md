@@ -1,5 +1,7 @@
 # @deepwhale-cn/dsh-data-rights
 
+[![dshfind 收录](https://dshfind.com/api/badge/feely0208/dsh-data-rights?lang=zh)](https://dshfind.com/zh/plugins/feely0208/dsh-data-rights)
+
 **个人信息权利** —— 查查阅、复制、删除权有没有**真的实现**。
 
 ## 不装它会怎样
